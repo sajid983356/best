@@ -13,8 +13,6 @@ function App() {
   const [ QRCodeDisplay, setQRCodeDisplay ] = useState(false)
   const [ currentMonthUrl, setCurrentMonthUrl ] = useState('');
   const [ consumerNumber, setConsumerNumber ] = useState('');
-
-
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   }
@@ -22,6 +20,7 @@ function App() {
     <div>
       <AppBar sx={{ background: 'none', boxShadow:'none', color: 'black'}} position="static">
         <Toolbar>
+          <Button color="inherit" onClick={() => window.location.reload()}>Home</Button>
           <Box sx={{ flexGrow: 1 }} />
           <Button color="inherit" onClick={() => changeLanguage('en')}>English</Button>
           <Button color="inherit" onClick={() => changeLanguage('hi')}>हिन्दी</Button>
